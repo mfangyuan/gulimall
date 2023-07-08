@@ -71,7 +71,7 @@ pipeline {
                 sh 'git config --global user.email "201512825@qq.com" '
                 sh 'git config --global user.name "wangfangyuan" '
                 sh 'git tag -a $PROJECT_NAME-$PROJECT_VERSION -m "$PROJECT_VERSION" '
-                sh 'git push http://$GIT_USERNAME:$GIT_PASSWORD@gitee.com/$GITEE_ACCOUNT/gulimall.git --tags --ipv4'
+                sh 'git push http://$GIT_USERNAME:$GIT_PASSWORD@github.com/$GITHUB_ACCOUNT/gulimall.git --tags --ipv4'
             }
 
         }
@@ -85,7 +85,7 @@ pipeline {
     KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
     REGISTRY = 'registry.cn-hangzhou.aliyuncs.com'
     DOCKERHUB_NAMESPACE = 'atguigumall1'
-    GITHUB_ACCOUNT = '201512825@qq.com'
+    GITHUB_ACCOUNT = 'mfangyuan'
     SONAR_CREDENTIAL_ID = 'sonar-qube'
     BRANCH_NAME = 'master'
   }
